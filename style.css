@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("assets/background.jpg");
+}
+
+.container {
+    background-color: rgb(210, 192, 56);
+    align-items: center;
+    padding: 5%;
+    margin: 10%;
+    border-radius: 4%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+}
+
+/*********    header and input form area ********/
+h1 {
+    font-family: 'Staatliches', cursive;
+    padding: 4%;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#input_button {
+    display: flex;
+}
+
+input {
+    font-family: "Lato", sans-serif;
+}
+
+label {
+    padding: 0.3rem;
+}
+
+
+#text-to-add {
+    padding: 0.5rem;
+    height: 100%;
+}
+
+#add-element {
+    background-color: rgb(121, 71, 24);
+    color: white;
+    padding: 0.5rem;
+}
+
+#add-element:hover {
+    background-color: rgb(148, 98, 51);
+}
+
+.warning-message {
+    color: red;
+    font-size: 0.7rem;
+    position: relative;
+    right: -0.5rem;
+}
+
+/**** extra area *****/
+.sleep-message {
+    color: rgb(34, 70, 177);
+    font-size: 0.6rem;
+    position: relative;
+    left: 55%;
+    padding: 1rem;
+}
+
+/******   list area *********/
+
+main {
+    font-family: "Lato", sans-serif;
+    font-size: 1.3rem;
+}
+
+ul {
+    list-style-type: none;
+    font-family: 'Staatliches', cursive;
+    font-size: 1.3rem;
+    margin: 0.6rem 0rem 1rem 0.6rem;
+}
+
+
+input[type=checkbox]{
+    /* -webkit-appearance: none>>> removing default appearance of checkbox */
+	-webkit-appearance: none;
+    appearance: none;
+	background-color: #fafafa;
+	border: 1px solid rgb(191, 166, 22);
+	padding: 0.5rem;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+
+/* the check symbol is a pseudo element that is hidden when checkbox is not checked; it is actually after the checkbox but moved artifically "on top" */
+input[type="checkbox"]::before {
+    content: "✔";
+    position: absolute;
+    font-size: 1.4em;
+    right: -1px;
+    top: -0.3em;
+    visibility: hidden;
+  }
+
+/* the symbol becomes visible when box is checked  */
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+
+input:checked ~ label {
+    text-decoration: line-through;
+}
+
+
+@media only screen and (max-width: 340px) {
+    .container {
+        margin: 3%;
+        padding: 2%;
+    }
+}
